@@ -1,0 +1,28 @@
+<% if !@subpages.empty? %>
+	<div id='subnav'>
+		<ul>
+			<% for page in @subpages %>
+				<li><%= link_to page.navlabel, view_page_path(page.name) %></li>
+			<% end %>
+		</ul>
+	</div>
+<% elsif @page.parent %>
+	<div id='subnav'>
+		<ul><li><%= link_to "Return to #{@page.parent.navlabel}", view_page_path(@page.parent.name) %></li></ul>
+	</div>
+<% end %>
+
+<% if logged_in? %>
+
+<a href='#' id='edit'>Edit This Page</a>
+
+	<%= in_place_editor_field :page, 'body', {}, 
+	{:rows => 20, :cols => 80, :external_control => 'edit', :external_control_only => true,
+	 :load_text_url => {:controller => 'viewer', :action => 'get_unformatted_text', :id => @page.id}
+	} %>
+
+<% else %>
+
+	<%= @page.body %>
+
+<% end %>

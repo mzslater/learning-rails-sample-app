@@ -1,0 +1,12 @@
+<h1>Resources</h1>
+<% for category in @categories %>
+	<% unless category.links.empty? %>	
+		<h2><%=h category.title %></h2>
+		<p><%=h category.description %></p>
+		<ul>
+		  <% for link in category.links %>
+			  <li><%= link_to link.title, link.url %></li>
+		  <% end %>
+		</ul>
+	<% end %>
+<% end %>

@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#pagewrapper {
+    width: 900px;
+    margin: 10px auto;
+    padding: 0;
+    border: 1px solid #999;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#content {
+    padding: 20px 10px;
+}
+#header {
+    background-color: #900;
+    margin: 0;
+    padding: 0;
+}
+#header p {
+    padding: 20px 10px;
+    font-size: 24px;
+    margin: 0;
+    color: white;
+    font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#footer {
+    background-color: #999;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    clear:both;
+    border-top: 2px solid #333;
+    text-align: center;
+}
+#footer p, #footer a {
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    font-weight:bold;
+    margin: 0;
+    padding: 2px;
+}
+
+/* Navigation Bar */
+
+#navbar ul {
+    padding: 0;
+    margin: 0;
+    background-color: #999;
+    color: White;
+    float: left;
+    width: 100%;
+    list-style: none;
+    font-weight: bold;
+    font-size: 13px;
+    border-bottom: 2px solid #333;
+}
+#navbar ul li { 
+    display: inline;
+    color: White;
+    float: left;
+    border-right: 1px solid #333;
+    font-family: arial, helvetica, sans-serif;
+}
+#navbar ul li a {
+    padding: 0.2em 0.7em;
+    background-color: #999; 
+    color: White;
+    text-decoration: none;
+    float:left;
+}
+#navbar ul li a:hover {
+    background-color: #333;
+    color: #fff;
+}
+#navbar #current a {
+	background-color: #000;
+}
+#subnav {
+	width: 200px;
+	float: left;
+	border-right: 1px solid black;
+	margin-right: 20px;
+}
+#edit {
+	font-size:12px;
+}
+#subnav {
+	width: 160px;
+	float: left;
+	margin: 0 20px 50px -10px;
+}
+#subnav ul {
+    list-style: none;
+    font-weight: bold;
+    font-size: 13px;
+	margin: 0;
+	padding: 0;
+}
+#subnav ul li {
+	background-color: #999;
+	border-bottom: 1px solid #333;
+	border-top: 1px solid #333;
+}
+#subnav ul li a {
+	padding: 5px 10px;
+	display:block;
+	color:white;
+	text-decoration: none;
+}
+#subnav ul li a:hover {
+    background-color: #333;
+    color: #fff;
+}

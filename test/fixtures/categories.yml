@@ -1,0 +1,16 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+ruby:
+  title: Ruby
+  description: Ruby the Programming Language
+  links: learningrails
+
+rails:
+  title: Ruby on Rails
+  description: Rails is a cool framework
+  links: learningrails
+
+search:
+  title: Search Engine
+  description: Used to find things on the web
+  links: google

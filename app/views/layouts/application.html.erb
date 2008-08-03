@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title><%= @pagetitle %></title>
+		<%= stylesheet_link_tag 'learningrails', 'scaffold' %>
+		<%= javascript_include_tag :defaults %>
+  </head>
+  <body>
+		<div id='pagewrapper'>
+			<div id='header'>
+				<p>Learning Rails Sample Application</p>
+		  </div>
+			<div id='navbar'>
+				<ul>
+					<% @tabs.each do |page| -%>
+						<li <%= "id='current'" if @page && (@page == page || @page.parent == page) %>>
+							<% if page.redirect? %>
+							  <%= link_to page.navlabel, :action => page.action_name, :controller => page.controller_name, :name => page.name %>
+							<% else %>
+							  <%= link_to page.navlabel, view_page_path(page.name) %>
+							<% end %>
+						</li>
+					<% end -%>
+					<li><% if logged_in? %>
+								<%= link_to "Log Out", logout_path %>
+							<% else %>
+								<%= link_to "Log In", login_path %>
+							<% end %>
+					</li>
+				</ul>
+			</div>
+			<div id='content'>
+				<h2><%= flash[:notice] %></h2>
+	      <%= yield %>
+			</div>
+			<div id='footer'>
+				<p>Learning Rails Sample Application</p>
+			</div>
+		</div>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<p>
+  <b>Name:</b>
+  <%=h @message.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @message.email %>
+</p>
+
+<p>
+  <b>Company:</b>
+  <%=h @message.company %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%=h @message.phone %>
+</p>
+
+<p>
+  <b>Subject:</b>
+  <%=h @message.subject %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%=h @message.body %>
+</p>
+
+
+<%= link_to 'Edit', edit_message_path(@message) %> |
+<%= link_to 'Back', messages_path %>

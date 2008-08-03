@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+learningrails:
+  url: http://learningrails.com/
+  title: LearningRails podcast home page
+  description: Pod and screencast dedicated to learning the Ruby on Rails framework
+  categories: ruby, rails
+
+google:
+  url: http://google.com/
+  title: Google
+  description: Widely used search engine
+  categories: search
