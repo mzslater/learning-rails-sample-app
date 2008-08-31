@@ -13,11 +13,9 @@ set :user, "deploy"
 set :branch, "master"
 set :deploy_via, :remote_cache
 
-namespace :passenger do
-   desc "Restart Application"
-   task :restart do
-     run "touch #{current_path}/tmp/restart.txt"
-   end
- end
-  
-after :deploy, "passenger:restart"
+namespace :deploy do
+  desc "Restart Application"
+  task :restart, :roles => :app do
+    run "touch #{current_path}/tmp/restart.txt"
+  end
+end
