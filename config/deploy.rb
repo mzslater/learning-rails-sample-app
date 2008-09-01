@@ -18,4 +18,8 @@ namespace :deploy do
   task :restart, :roles => :app do
     run "touch #{current_path}/tmp/restart.txt"
   end
+  desc "Start Application -- not needed for Passenger"
+  task :start, :roles => :app do
+    # nothing -- need to override default cap start task when using Passenger
+  end
 end
