@@ -12,6 +12,7 @@ set :scm, "git"
 set :user, "deploy"
 set :branch, "master"
 set :deploy_via, :remote_cache
+set :use_sudo, false
 
 namespace :deploy do
   desc "Restart Application"
